@@ -13,11 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Registered the RolesTableSeeder to automatically run the class when the db:seed command is called
+        $this->call(RolesTableSeeder::class);
     }
 }
