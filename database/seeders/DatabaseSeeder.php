@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Registered the RolesTableSeeder to automatically run the class when the db:seed command is called
+        // Registered the RolesTableSeeder and UsersTableSeeder to automatically run the class when the db:seed command is called
         $this->call(RolesTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
     }
 }

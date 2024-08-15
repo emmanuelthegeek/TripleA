@@ -11,9 +11,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['jwt.auth'])->name('dashboard'); // Jwt middleware to check for tokens before accessing the dashboard.
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['role:1,2'])->group(function () { // This middleware checks for the user's authorization
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

@@ -11,7 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'jwt.auth' => \App\Http\Middleware\JWTMiddleware::class, //This is the JWT middleware
+            'role' => \App\Http\Middleware\RoleMiddleware::class, //This middleware is for access control on some routes
+        ]);
+        
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
