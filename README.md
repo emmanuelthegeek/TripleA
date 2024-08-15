@@ -70,12 +70,10 @@ This section contains an explanation of the tools used in this project.
         DB_DATABASE=database_name
         DB_USERNAME=database_username
         DB_PASSWORD=database_password
+
+        JWT_SECRET=jwt_secret
+        Add mail configurations
     ```
-
-    # JWT Secret
-    JWT_SECRET=jwt_secret
-
-    # Add mail configurations
 
 - Apply the database migration command below to create the Roles table first.
     `php artisan migrate --path=/database/migrations/2024_08_12_223642_create_roles_table.php`
