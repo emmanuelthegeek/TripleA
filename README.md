@@ -63,12 +63,14 @@ This section contains an explanation of the tools used in this project.
     `php artisan jwt:secret`
 
 - Open .env and set up your database and other environment variables
-    DB_CONNECTION=mysql
-    DB_HOST=db_ip_address
-    DB_PORT=db_port_number
-    DB_DATABASE=database_name
-    DB_USERNAME=database_username
-    DB_PASSWORD=database_password
+    ```
+        DB_CONNECTION=mysql
+        DB_HOST=db_ip_address
+        DB_PORT=db_port_number
+        DB_DATABASE=database_name
+        DB_USERNAME=database_username
+        DB_PASSWORD=database_password
+    ```
 
     # JWT Secret
     JWT_SECRET=jwt_secret
