@@ -5,7 +5,7 @@
 - [Requirements](#Requirements)
 - [Explanation](#Explanation)
 - [Installation](#Installation)
-- [Unit_Testing](#Unit Testing)
+- [Unit Testing](#Unit_Testing)
 
 ## Introduction
 
@@ -96,7 +96,7 @@ This section contains an explanation of the tools used in this project.
 The application should now be running on the address specified in the terminal.
 
 
-## Unit Testing
+## Unit_Testing
 
 A unit test was also added to this project. The unit tests were written using PHPUnit.
 
